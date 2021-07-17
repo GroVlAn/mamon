@@ -7,10 +7,6 @@
         grid-template: repeat(3, 150px) / repeat(3, 2fr);
 
         @media (max-width:$md3+px) {
-            grid-template: repeat(5, 120px) / repeat(2, 2fr);
-        }
-
-        @media (max-width:$md4+px) {
             grid-template: repeat(9, 120px) / repeat(1, 2fr);
         }
     }
