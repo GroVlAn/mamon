@@ -367,6 +367,7 @@ nav {
   width: 235px;
   height: 60px;
   font-size: 24px;
+  border-radius: 10px;
 }
 
 @media (max-width: 767.98px) {
