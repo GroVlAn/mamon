@@ -1,0 +1,35 @@
+.footer {
+    width: 100%;
+    background-color: #F7F7F7;
+
+    &__content {
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+
+.social {
+    height: 30px;
+    width: 220px;
+    flex: 0 0 220px;
+    display: flex;
+    justify-content: space-between;
+
+    &__icon {
+        width: 100%;
+        display: block;
+        cursor: pointer;
+        color: #B2B2B2;
+        font-size: 18px;
+
+        @media (min-width:$md3+px) {
+            &:hover {
+                color: #8a8a8a;
+            }
+
+        }
+    }
+}

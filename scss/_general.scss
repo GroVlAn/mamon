@@ -1,0 +1,19 @@
+.contact-us {
+    cursor: pointer;
+    font-style: normal;
+    font-weight: bold;
+    background-color: #5528FF;
+    border-radius: 5px;
+    border: none;
+    color: #ffffff;
+    transition: 0.3s ease-out 0s;
+
+    @media (min-width:$md3+px) {
+        &:hover {
+            background-color: #2c1385;
+            transform: translate(0, 1px);
+        }
+
+    }
+
+}

@@ -1,0 +1,166 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 150px;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 0 170px;
+
+    &__img {}
+
+    &__name {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+nav {
+    // position: relative;
+    flex: 0 0 400px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s ease-in 0s;
+
+
+
+    @media (max-width:$md3+px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: translate(0, -100%);
+        background-color: #f5f5f5;
+    }
+
+    &__item {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16 / 14 * 100%;
+
+        @media (max-width:$md3+px) {
+            margin: 50px 0;
+            font-size: 34px;
+            line-height: 36 / 34 * 100%;
+
+        }
+
+        @media (min-width:$md3+px) {
+            &:hover {
+                color: #2c1385;
+            }
+
+        }
+    }
+
+    &__link {
+        cursor: pointer;
+    }
+
+    &__button {
+        width: 100px;
+        height: 24px;
+        font-size: 14px;
+        line-height: 16 / 14 * 100%;
+
+        @media (max-width:$md3+px) {
+            width: 200px;
+            height: 44px;
+            font-size: 24px;
+            line-height: 16 / 14 * 100%;
+
+        }
+    }
+
+
+}
+
+.menu.mob {
+
+    @media (max-width: $md3+px) {
+        overflow: auto;
+        transform: translate(0, 0);
+    }
+}
+
+
+.burger {
+    display: none;
+
+
+    @media (max-width: $md3+px) {
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 19px;
+        right: 15%;
+        z-index: 50;
+    }
+
+    span {
+        @media (max-width: $md3+px) {
+            position: absolute;
+            background-color: #000;
+            right: 0;
+            width: 100%;
+            height: 2px;
+            top: 9px;
+            transition: transform 0.5s ease 0s;
+        }
+    }
+
+    &::after,
+    &::before {
+        content: "";
+        background-color: #000;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        right: 0;
+        transition: transform 0.5s ease 0s;
+    }
+
+    &::after {
+        bottom: 0;
+    }
+
+    &::before {
+        top: 0;
+    }
+
+    &.active::before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    &.active::after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+    &.active span {
+        transform: scale(0);
+    }
+
+}
